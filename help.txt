@@ -1,0 +1,5 @@
+Commands:
+  >> help   - displays help text
+  >> exit   - exits the program
+  >> -<str> - E.g: -zebr will return the winning moves
+              if "zebr" were currently written
