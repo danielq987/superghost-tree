@@ -93,12 +93,12 @@ def addEdges(tree):
 
   leng = len(keys)
   count = 0
+  edgetime = time.time()
 
   # iterate over the keys and add edges for each node to 1 or 2 of its parents
   for node in keys:
     name = node.getName()
     # logging
-    edgetime = time.time()
     if count % 200 == 0:
       print(f"{count}/{leng} {name} in {round(time.time() - edgetime, 1)}")
     if len(name) != 1:
