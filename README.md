@@ -2,6 +2,8 @@
 
 This is my attempt at solving Superghost using Python, by using a game tree.
 
+Information about the game can be found here. https://www.wikiwand.com/en/Ghost_(game)
+
 ## About the Program
 
 **Disclaimer:** Please don't use this program to generate a tree yourself, unless your word list is rather small (<10000 words). The code here is the code I used, but making a graph of ~60000 words took around 6 hours, which definitely does not seem like the most efficient way.
