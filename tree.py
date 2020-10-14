@@ -101,7 +101,7 @@ def addEdges(tree):
     # logging
     if count % 200 == 0:
       print(f"{count}/{leng} {name} in {round(time.time() - edgetime, 1)}")
-    if len(name) != 1:
+    if len(name) != 1 and len(name) != 0:
       lparent = tree.getNode(name[:-1])
       if type(lparent) == Node:
         tree.addEdge(Edge(lparent, node))
@@ -146,8 +146,8 @@ def makeTree():
   tree = addEdges(tree)
   # sets word attributes of nodes to True if they are valid words, and removes all their children
   tree = wordFlag(tree)
-  # assign a value of 1 or 2 to each word, representing which player wins when that word is spelt (for optimal play)
-  assignWinners(tree, "logs/test.txt")
+  # # assign a value of 1 or 2 to each word, representing which player wins when that word is spelt (for optimal play)
+  # assignWinners(tree, "logs/test.txt")
   return tree
 
 def inv(a):
@@ -199,9 +199,15 @@ def assignWinners(tree, filepath):
 def main():
   startTime = time.time()
 
-  tree = makeTree()
+  tree = loadTree("tree/tree.p")
 
-  dumpTree(tree, "treeWinner1.p")
+  count = 0
+  for edge in tree.edges.keys():
+    if edge.getWinner()== 0:
+      count += 1
+      print(edge.getName())
+  
+  print(count)
 
   endTime = time.time()
   print(f"Program completed in {round(endTime - startTime, 2)} seconds")

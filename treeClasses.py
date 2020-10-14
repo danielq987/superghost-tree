@@ -83,7 +83,7 @@ class Graph(object):
     src = edge.getSource()
     if type(dest) != Node or type(src) != Node:
       return -2
-    if dest in self.edges[src]:
+    if dest in self.edges[src] or dest == src:
       return -1
     if dest not in self.edges.keys() or src not in self.edges.keys():
       raise KeyError(f"Invalid Src/Dest {src}, {dest}")
