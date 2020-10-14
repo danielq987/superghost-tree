@@ -9,7 +9,7 @@ import pickle
 This file contains all the required functions to build a tree from a list of words, albeit slightly inefficiently
 """
 
-# the wordlist to be used
+# EDIT THIS -> MAKE SURE THE FILE IS IN A JSON LIST FORMAT
 word_list = loadWords("words/u.txt")
 
 node_list = []
@@ -199,15 +199,13 @@ def assignWinners(tree, filepath):
 def main():
   startTime = time.time()
 
-  tree = loadTree("tree/tree.p")
+  """
+  DISCLAIMER: Cannot guarantee that the code is bug free, and definitely not efficient. :P oops
 
-  count = 0
-  for edge in tree.edges.keys():
-    if edge.getWinner()== 0:
-      count += 1
-      print(edge.getName())
-  
-  print(count)
+  To make a tree, call constructNodes(), then addEdges(tree), then wordFlag(tree). I recommend using pickle.dump to dump each file to a .p file to not lose any progress.
+
+  Finally, call assignWinners(tree, "filepath to log json file to") and dump the tree again.
+  """
 
   endTime = time.time()
   print(f"Program completed in {round(endTime - startTime, 2)} seconds")
