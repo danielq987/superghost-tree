@@ -28,4 +28,4 @@ https://github.com/danielq987/superghost-computer
 
 https://github.com/danielq987/superghost-explorer
 
-As well, more detailed information about this project can be found on my non-existant blog [here](https://danielq987.github.io/blog/posts/2020/10/15/superghost.html).
+As well, more detailed information about this project can be found on my blog [here](https://danielq987.github.io/blog/posts/2020/10/15/superghost.html).
