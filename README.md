@@ -23,7 +23,9 @@ Creating this tree spawned two other projects:
 - An explorer which can explore tree/tree.p, finding optimal moves and examining each of the ~380000 nodes in the tree.
 
 You can find these two projects on my GitHub page, linked below.
+
 https://github.com/danielq987/superghost-computer
+
 https://github.com/danielq987/superghost-explorer
 
 As well, more detailed information about this project can be found on my non-existant blog (hopefully up soon!).
